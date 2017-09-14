@@ -8,7 +8,7 @@
     <title>Neoscan.Api – NeoScan vdev</title>
     <link rel="stylesheet" href="dist/app-268c9dc719.css" />
 
-    <script src="dist/sidebar_items-017f9ccb4d.js"></script>
+    <script src="dist/sidebar_items-1007ab4cae.js"></script>
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
@@ -68,9 +68,8 @@
 
 
         <section id="moduledoc">
-          <p>  Main API for accessing data from the explorer.
-  All data is provided through GET requests in <code class="inline">/api/main_net/v1</code>.
-  Testnet isn’t currently available.</p>
+          <p>  TestNet API for accessing data from the explorer.
+  All data is provided through GET requests in <code class="inline">/api/test_net/v1</code>.</p>
 
         </section>
 
@@ -249,7 +248,7 @@ If no <code class="inline">type</code> is provided, returns all types</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_address/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_address/{hash_string}
 {
   &quot;txids&quot;: [
     {
@@ -299,23 +298,23 @@ If no <code class="inline">type</code> is provided, returns all types</p>
     <p>Returns all working nodes and their respective heights.
 Information is updated each 5 minutes.</p>
 <p>Currrent tested nodes are:</p>
-<p>http://seed1.cityofzion.io:8080
-http://seed2.cityofzion.io:8080
-http://seed3.cityofzion.io:8080
-http://seed4.cityofzion.io:8080
-http://seed5.cityofzion.io:8080
-http://api.otcgo.cn:10332
-http://seed1.neo.org:10332
-http://seed2.neo.org:10332
-http://seed3.neo.org:10332
-http://seed4.neo.org:10332
-http://seed5.neo.org:10332</p>
+<p>http://test1.cityofzion.io:8880
+http://test2.cityofzion.io:8880
+http://test3.cityofzion.io:8880
+http://test4.cityofzion.io:8880
+http://test5.cityofzion.io:8880
+http://api.otcgo.cn:20332
+http://seed1.neo.org:20332
+http://seed2.neo.org:20332
+http://seed3.neo.org:20332
+http://seed4.neo.org:20332
+http://seed5.neo.org:20332</p>
 <h2 id="get_all_nodes/0-examples" class="section-heading">
   <a href="#get_all_nodes/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_all_nodes
+<pre><code class="elixir">/api/test_net/v1/get_all_nodes
 [
   {
     &quot;url&quot;: &quot;http://seed1.cityofzion.io:8080&quot;,
@@ -345,7 +344,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_asset/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_asset/{hash_string}
 {
   &quot;type&quot;: &quot;type_string&quot;,
   &quot;txid&quot;: &quot;tx_id_string&quot;,
@@ -384,7 +383,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_assets
+<pre><code class="elixir">/api/test_net/v1/get_assets
 [
   {
     &quot;type&quot;: &quot;type_string&quot;,
@@ -426,7 +425,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_balance/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_balance/{hash_string}
 {
   &quot;balance&quot;: [
     {
@@ -459,8 +458,8 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_block/{hash_string}
-/api/main_net/v1/get_block/{height}
+<pre><code class="elixir">/api/test_net/v1/get_block/{hash_string}
+/api/test_net/v1/get_block/{height}
 {
   &quot;version&quot;: integer,
   &quot;tx_count&quot;: integer,
@@ -505,7 +504,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_claimed/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_claimed/{hash_string}
 {
   &quot;claimed&quot;: [
     {
@@ -544,7 +543,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_height
+<pre><code class="elixir">/api/test_net/v1/get_height
 {
   &quot;height&quot;: 1239809
 }</code></pre>
@@ -570,7 +569,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_highest_block
+<pre><code class="elixir">/api/test_net/v1/get_highest_block
 {
   &quot;version&quot;: integer,
   &quot;tx_count&quot;: integer,
@@ -615,7 +614,7 @@ http://seed5.neo.org:10332</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_last_blocks</code></pre>
+<pre><code class="elixir">/api/test_net/v1/get_last_blocks</code></pre>
 <p>   [</p>
 <pre><code class="elixir">  {
     &quot;version&quot;: integer,
@@ -664,8 +663,8 @@ If no <code class="inline">type</code> is provided, returns all types</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_last_transactions/{type}
-/api/main_net/v1/get_last_transactions
+<pre><code class="elixir">/api/test_net/v1/get_last_transactions/{type}
+/api/test_net/v1/get_last_transactions
 [{
     &quot;vouts&quot;: [
       {
@@ -733,7 +732,7 @@ If no <code class="inline">type</code> is provided, returns all types</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_nodes
+<pre><code class="elixir">/api/test_net/v1/get_nodes
 {
   &quot;urls&quot;: [
     &quot;http://seed1.cityofzion.io: 8080&quot;,
@@ -762,7 +761,7 @@ If no <code class="inline">type</code> is provided, returns all types</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_transaction/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_transaction/{hash_string}
 {
   &quot;vouts&quot;: [
     {
